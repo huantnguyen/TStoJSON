@@ -67,7 +67,8 @@ const measure = {
   }
 };
 var Test_default = measure;
-const data = JSON.stringify(imperial, null, 4);
+const data = JSON.stringify(measure, null, 4);
+console.log(data);
 fs.writeFile("user.json", data, (err) => {
   if (err) {
     throw err;

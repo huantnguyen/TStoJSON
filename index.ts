@@ -96,7 +96,14 @@ export default measure;
 
 
 // convert JSON object to string
-const data = JSON.stringify(imperial, null, 4);
+//const data = JSON.stringify(metric, null, 4);
+//const data1 = JSON.stringify(imperial, null, 4);
+//const data2 = JSON.stringify(measure, null, 4);
+//const data3 = data.concat(' ', data1);
+//const data4 = data3.concat(' ', data2)
+const data = JSON.stringify(measure, null, 4);
+console.log(data)
+//console.log(data);
 
 // write JSON string to a file
 fs.writeFile('user.json', data, (err) => {
