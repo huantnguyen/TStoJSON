@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../result/definitions/__tests__/illuminance.test.ts"],
+  "sourcesContent": ["import configureMeasurements from '../..';\nimport illuminance, {\n  IlluminanceSystems,\n  IlluminanceUnits,\n} from '../illuminance';\n\ntest('ft-cd to lx', () => {\n  const convert = configureMeasurements<\n    'illuminance',\n    IlluminanceSystems,\n    IlluminanceUnits\n  >({\n    illuminance,\n  });\n  expect(convert(1).from('ft-cd').to('lx')).toBe(10.76391);\n});\n\ntest('lx to ft-cd', () => {\n  const convert = configureMeasurements<\n    'illuminance',\n    IlluminanceSystems,\n    IlluminanceUnits\n  >({\n    illuminance,\n  });\n  expect(convert(1).from('lx').to('ft-cd')).toBe(0.09290304359661128);\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,eAAkC;AAClC,yBAGO;AAEP,KAAK,eAAe,MAAM;AACxB,QAAM,UAAU,sBAId;AAAA,IACA;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,SAAS,GAAG,OAAO,KAAK;AAAA;AAGjD,KAAK,eAAe,MAAM;AACxB,QAAM,UAAU,sBAId;AAAA,IACA;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,MAAM,GAAG,UAAU,KAAK;AAAA;",
+  "names": []
+}

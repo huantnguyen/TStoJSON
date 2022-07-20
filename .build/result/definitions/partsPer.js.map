@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/partsPer.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type PartsPerUnits = PartsPerSIUnits;\nexport type PartsPerSystems = 'SI';\n\nexport type PartsPerSIUnits = 'ppm' | 'ppb' | 'ppt' | 'ppq';\n\nconst SI: Record<PartsPerSIUnits, Unit> = {\n  ppm: {\n    name: {\n      singular: 'Part-per Million',\n      plural: 'Parts-per Million',\n    },\n    to_anchor: 1,\n  },\n  ppb: {\n    name: {\n      singular: 'Part-per Billion',\n      plural: 'Parts-per Billion',\n    },\n    to_anchor: 0.001,\n  },\n  ppt: {\n    name: {\n      singular: 'Part-per Trillion',\n      plural: 'Parts-per Trillion',\n    },\n    to_anchor: 0.000001,\n  },\n  ppq: {\n    name: {\n      singular: 'Part-per Quadrillion',\n      plural: 'Parts-per Quadrillion',\n    },\n    to_anchor: 0.000000001,\n  },\n};\n\nconst measure: Measure<PartsPerSystems, PartsPerUnits> = {\n  systems: {\n    SI,\n  },\n};\n\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAMA,MAAM,KAAoC;AAAA,EACxC,KAAK;AAAA,IACH,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,KAAK;AAAA,IACH,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,KAAK;AAAA,IACH,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,KAAK;AAAA,IACH,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAAmD;AAAA,EACvD,SAAS;AAAA,IACP;AAAA;AAAA;AAIJ,IAAO,mBAAQ;",
+  "names": []
+}

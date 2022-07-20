@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/force.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type ForceUnits = ForceSIUnits;\nexport type ForceSystems = 'SI';\n\nexport type ForceSIUnits = 'N' | 'kN' | 'lbf';\n\nconst SI: Record<ForceSIUnits, Unit> = {\n  N: {\n    name: {\n      singular: 'Newton',\n      plural: 'Newtons',\n    },\n    to_anchor: 1,\n  },\n  kN: {\n    name: {\n      singular: 'Kilonewton',\n      plural: 'Kilonewtons',\n    },\n    to_anchor: 1000,\n  },\n  lbf: {\n    name: {\n      singular: 'Pound-force',\n      plural: 'Pound-forces',\n    },\n    to_anchor: 4.44822,\n  },\n};\n\nconst measure: Measure<ForceSystems, ForceUnits> = {\n  systems: {\n    SI,\n  },\n};\n\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAMA,MAAM,KAAiC;AAAA,EACrC,GAAG;AAAA,IACD,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,KAAK;AAAA,IACH,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAA6C;AAAA,EACjD,SAAS;AAAA,IACP;AAAA;AAAA;AAIJ,IAAO,gBAAQ;",
+  "names": []
+}

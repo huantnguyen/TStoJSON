@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/current.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type CurrentUnits = CurrentSIUnits;\nexport type CurrentSystems = 'SI';\n\nexport type CurrentSIUnits = 'A' | 'mA' | 'kA';\n\nconst SI: Record<CurrentSIUnits, Unit> = {\n  A: {\n    name: {\n      singular: 'Ampere',\n      plural: 'Amperes',\n    },\n    to_anchor: 1,\n  },\n  mA: {\n    name: {\n      singular: 'Milliampere',\n      plural: 'Milliamperes',\n    },\n    to_anchor: 0.001,\n  },\n  kA: {\n    name: {\n      singular: 'Kiloampere',\n      plural: 'Kiloamperes',\n    },\n    to_anchor: 1000,\n  },\n};\n\nconst measure: Measure<CurrentSystems, CurrentUnits> = {\n  systems: {\n    SI,\n  },\n};\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAMA,MAAM,KAAmC;AAAA,EACvC,GAAG;AAAA,IACD,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAAiD;AAAA,EACrD,SAAS;AAAA,IACP;AAAA;AAAA;AAGJ,IAAO,kBAAQ;",
+  "names": []
+}

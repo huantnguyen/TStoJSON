@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../result/definitions/__tests__/acceleration.test.ts"],
+  "sourcesContent": ["import configureMeasurements from '../..';\nimport acceleration, {\n  AccelerationSystems,\n  AccelerationUnits,\n} from '../acceleration';\n\ntest('g to m/s2', () => {\n  const convert = configureMeasurements<\n    'acceleration',\n    AccelerationSystems,\n    AccelerationUnits\n  >({\n    acceleration,\n  });\n  expect(convert(1).from('g-force').to('m/s2')).toBe(9.80665);\n});\n\ntest('m/s2 to g', () => {\n  const convert = configureMeasurements<\n    'acceleration',\n    AccelerationSystems,\n    AccelerationUnits\n  >({\n    acceleration,\n  });\n  expect(convert(9.80665).from('m/s2').to('g-force')).toBe(1);\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,eAAkC;AAClC,0BAGO;AAEP,KAAK,aAAa,MAAM;AACtB,QAAM,UAAU,sBAId;AAAA,IACA;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,WAAW,GAAG,SAAS,KAAK;AAAA;AAGrD,KAAK,aAAa,MAAM;AACtB,QAAM,UAAU,sBAId;AAAA,IACA;AAAA;AAEF,SAAO,QAAQ,SAAS,KAAK,QAAQ,GAAG,YAAY,KAAK;AAAA;",
+  "names": []
+}

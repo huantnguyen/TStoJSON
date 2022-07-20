@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../result/definitions/__tests__/each.test.ts"],
+  "sourcesContent": ["import configureMeasurements from '../..';\nimport each, { EachSystems, EachUnits } from '../each';\n\ntest('ea to ea', () => {\n  const convert = configureMeasurements<'each', EachSystems, EachUnits>({\n    each,\n  });\n  expect(convert(1).from('ea').to('ea')).toBe(1);\n});\n\ntest('dz to ea', () => {\n  const convert = configureMeasurements<'each', EachSystems, EachUnits>({\n    each,\n  });\n  expect(convert(1).from('dz').to('ea')).toBe(12);\n});\n\ntest('ea to dz', () => {\n  const convert = configureMeasurements<'each', EachSystems, EachUnits>({\n    each,\n  });\n  expect(convert(12).from('ea').to('dz')).toBe(1);\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,eAAkC;AAClC,kBAA6C;AAE7C,KAAK,YAAY,MAAM;AACrB,QAAM,UAAU,sBAAsD;AAAA,IACpE;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,MAAM,GAAG,OAAO,KAAK;AAAA;AAG9C,KAAK,YAAY,MAAM;AACrB,QAAM,UAAU,sBAAsD;AAAA,IACpE;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,MAAM,GAAG,OAAO,KAAK;AAAA;AAG9C,KAAK,YAAY,MAAM;AACrB,QAAM,UAAU,sBAAsD;AAAA,IACpE;AAAA;AAEF,SAAO,QAAQ,IAAI,KAAK,MAAM,GAAG,OAAO,KAAK;AAAA;",
+  "names": []
+}

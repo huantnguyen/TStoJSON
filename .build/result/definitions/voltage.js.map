@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/voltage.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type VoltageUnits = VoltageSIUnits;\nexport type VoltageSystems = 'SI';\n\nexport type VoltageSIUnits = 'V' | 'mV' | 'kV';\n\nconst SI: Record<VoltageSIUnits, Unit> = {\n  V: {\n    name: {\n      singular: 'Volt',\n      plural: 'Volts',\n    },\n    to_anchor: 1,\n  },\n  mV: {\n    name: {\n      singular: 'Millivolt',\n      plural: 'Millivolts',\n    },\n    to_anchor: 0.001,\n  },\n  kV: {\n    name: {\n      singular: 'Kilovolt',\n      plural: 'Kilovolts',\n    },\n    to_anchor: 1000,\n  },\n};\n\nconst measure: Measure<VoltageSystems, VoltageUnits> = {\n  systems: {\n    SI,\n  },\n};\n\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAMA,MAAM,KAAmC;AAAA,EACvC,GAAG;AAAA,IACD,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAAiD;AAAA,EACrD,SAAS;AAAA,IACP;AAAA;AAAA;AAIJ,IAAO,kBAAQ;",
+  "names": []
+}

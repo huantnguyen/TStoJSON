@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/each.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type EachUnits = EachMetricUnits;\nexport type EachSystems = 'metric';\n\nexport type EachMetricUnits = 'ea' | 'dz';\n\nconst metric: Record<EachMetricUnits, Unit> = {\n  ea: {\n    name: {\n      singular: 'Each',\n      plural: 'Each',\n    },\n    to_anchor: 1,\n  },\n  dz: {\n    name: {\n      singular: 'Dozen',\n      plural: 'Dozens',\n    },\n    to_anchor: 12,\n  },\n};\n\nconst measure: Measure<EachSystems, EachUnits> = {\n  systems: {\n    metric,\n  },\n};\n\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAMA,MAAM,SAAwC;AAAA,EAC5C,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAA2C;AAAA,EAC/C,SAAS;AAAA,IACP;AAAA;AAAA;AAIJ,IAAO,eAAQ;",
+  "names": []
+}

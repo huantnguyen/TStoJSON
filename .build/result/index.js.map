@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../result/index.ts"],
+  "sourcesContent": ["import configMeasurements, { Converter } from './convert';\nimport allMeasures from './definitions';\nexport default configMeasurements;\nexport type {\n  Anchor,\n  BestResult,\n  Conversion,\n  Measure,\n  Unit,\n  UnitDescription,\n} from './convert';\nexport * from './definitions';\nexport { allMeasures, Converter };\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAA8C;AAC9C,yBAAwB;AAUxB,oBAAc;AATd,IAAO,iBAAQ;",
+  "names": []
+}

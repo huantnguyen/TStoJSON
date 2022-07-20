@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/illuminance.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type IlluminanceUnits =\n  | IlluminanceMetricUnits\n  | IlluminanceImperialUnits;\nexport type IlluminanceSystems = 'metric' | 'imperial';\n\nexport type IlluminanceMetricUnits = 'lx';\nexport type IlluminanceImperialUnits = 'ft-cd';\n\nconst metric: Record<IlluminanceMetricUnits, Unit> = {\n  lx: {\n    name: {\n      singular: 'Lux',\n      plural: 'Lux',\n    },\n    to_anchor: 1,\n  },\n};\n\nconst imperial: Record<IlluminanceImperialUnits, Unit> = {\n  'ft-cd': {\n    name: {\n      singular: 'Foot-candle',\n      plural: 'Foot-candles',\n    },\n    to_anchor: 1,\n  },\n};\n\nconst measure: Measure<IlluminanceSystems, IlluminanceUnits> = {\n  systems: {\n    metric,\n    imperial,\n  },\n  anchors: {\n    metric: {\n      imperial: {\n        ratio: 1 / 10.76391,\n      },\n    },\n    imperial: {\n      metric: {\n        ratio: 10.76391,\n      },\n    },\n  },\n};\n\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AASA,MAAM,SAA+C;AAAA,EACnD,IAAI;AAAA,IACF,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,WAAmD;AAAA,EACvD,SAAS;AAAA,IACP,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAAyD;AAAA,EAC7D,SAAS;AAAA,IACP;AAAA,IACA;AAAA;AAAA,EAEF,SAAS;AAAA,IACP,QAAQ;AAAA,MACN,UAAU;AAAA,QACR,OAAO,IAAI;AAAA;AAAA;AAAA,IAGf,UAAU;AAAA,MACR,QAAQ;AAAA,QACN,OAAO;AAAA;AAAA;AAAA;AAAA;AAMf,IAAO,sBAAQ;",
+  "names": []
+}

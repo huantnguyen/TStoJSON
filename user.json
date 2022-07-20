@@ -1,0 +1,17 @@
+{
+    "F": {
+        "name": {
+            "singular": "degree Fahrenheit",
+            "plural": "degrees Fahrenheit"
+        },
+        "to_anchor": 1
+    },
+    "R": {
+        "name": {
+            "singular": "degree Rankine",
+            "plural": "degrees Rankine"
+        },
+        "to_anchor": 1,
+        "anchor_shift": 459.67
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../result/definitions/__tests__/force.test.ts"],
+  "sourcesContent": ["import configureMeasurements from '../..';\nimport force, { ForceSystems, ForceUnits } from '../force';\n\ntest('N to kN', () => {\n  const convert = configureMeasurements<'force', ForceSystems, ForceUnits>({\n    force,\n  });\n  expect(convert(1).from('N').to('kN')).toBe(1 / 1000);\n});\n\ntest('kN to N', () => {\n  const convert = configureMeasurements<'force', ForceSystems, ForceUnits>({\n    force,\n  });\n  expect(convert(1).from('kN').to('N')).toBe(1000);\n});\n\ntest('N to lbf', () => {\n  const convert = configureMeasurements<'force', ForceSystems, ForceUnits>({\n    force,\n  });\n  expect(convert(1).from('N').to('lbf')).toBeCloseTo(0.2224809);\n});\n\ntest('lbf to N', () => {\n  const convert = configureMeasurements<'force', ForceSystems, ForceUnits>({\n    force,\n  });\n  expect(convert(1).from('lbf').to('N')).toBe(4.44822);\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,eAAkC;AAClC,mBAAgD;AAEhD,KAAK,WAAW,MAAM;AACpB,QAAM,UAAU,sBAAyD;AAAA,IACvE;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,KAAK,GAAG,OAAO,KAAK,IAAI;AAAA;AAGjD,KAAK,WAAW,MAAM;AACpB,QAAM,UAAU,sBAAyD;AAAA,IACvE;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,MAAM,GAAG,MAAM,KAAK;AAAA;AAG7C,KAAK,YAAY,MAAM;AACrB,QAAM,UAAU,sBAAyD;AAAA,IACvE;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,KAAK,GAAG,QAAQ,YAAY;AAAA;AAGrD,KAAK,YAAY,MAAM;AACrB,QAAM,UAAU,sBAAyD;AAAA,IACvE;AAAA;AAEF,SAAO,QAAQ,GAAG,KAAK,OAAO,GAAG,MAAM,KAAK;AAAA;",
+  "names": []
+}

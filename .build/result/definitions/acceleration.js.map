@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../result/definitions/acceleration.ts"],
+  "sourcesContent": ["import { Measure, Unit } from './../index';\nexport type AccelerationUnits = AccelerationMetricUnits;\nexport type AccelerationSystems = 'metric';\n\nexport type AccelerationMetricUnits = 'g-force' | 'm/s2';\n\nconst metric: Record<AccelerationMetricUnits, Unit> = {\n  'g-force': {\n    name: {\n      singular: 'g-force',\n      plural: 'g-forces',\n    },\n    to_anchor: 9.80665,\n  },\n  'm/s2': {\n    name: {\n      singular: 'Metre per second squared',\n      plural: 'Metres per second squared',\n    },\n    to_anchor: 1,\n  },\n};\n\nconst measure: Measure<AccelerationSystems, AccelerationUnits> = {\n  systems: {\n    metric,\n  },\n};\n\nexport default measure;\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAMA,MAAM,SAAgD;AAAA,EACpD,WAAW;AAAA,IACT,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA,EAEb,QAAQ;AAAA,IACN,MAAM;AAAA,MACJ,UAAU;AAAA,MACV,QAAQ;AAAA;AAAA,IAEV,WAAW;AAAA;AAAA;AAIf,MAAM,UAA2D;AAAA,EAC/D,SAAS;AAAA,IACP;AAAA;AAAA;AAIJ,IAAO,uBAAQ;",
+  "names": []
+}
